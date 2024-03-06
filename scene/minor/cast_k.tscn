@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://2oe16iowcp5m"]
+
+[ext_resource type="Script" path="res://script/cast_k.gd" id="1_0slw6"]
+[ext_resource type="Texture2D" uid="uid://ghysjluu7tav" path="res://icon.svg" id="2_m5nlx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jjo5g"]
+radius = 131.973
+
+[node name="castK" type="CharacterBody2D"]
+scale = Vector2(0.269807, 0.269807)
+script = ExtResource("1_0slw6")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("2_m5nlx")
+
+[node name="range" type="CollisionShape2D" parent="."]
+scale = Vector2(0.622053, 0.622053)
+shape = SubResource("CircleShape2D_jjo5g")
+
+[node name="attack time" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="Strike" from="." to="." method="_on_strike"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]

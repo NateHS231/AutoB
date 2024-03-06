@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://j7psax7s2kto"]
+
+[ext_resource type="Script" path="res://script/card.gd" id="1_n64cu"]
+[ext_resource type="Texture2D" uid="uid://ghysjluu7tav" path="res://icon.svg" id="1_tojvm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnqsq"]
+size = Vector2(127, 245)
+
+[node name="card" type="Area2D"]
+script = ExtResource("1_n64cu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_lnqsq")
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(0.333333, 0.478431, 0.141176, 1)
+scale = Vector2(1, 1.92)
+texture = ExtResource("1_tojvm")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
