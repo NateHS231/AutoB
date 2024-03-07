@@ -26,12 +26,16 @@ func _process(delta):
 	if groovin:
 		if foe and foe not in strikingRange:
 			move_self()
+#			print(self.get_last_slide_collision())
 	pass
 
 func move_self():
 #	self.position = self.position.move_toward(foe.position, 2)
-	velocity = velocity.move_toward(foe.position, 2)
-	move_and_slide()
+#	velocity = velocity.move_toward(foe.position, 2)
+	velocity = position.direction_to(foe.position) * 2
+	
+#	move_and_slide()
+	move_and_collide(velocity)
 	pass
 
 func bind_self(battleground):
@@ -100,6 +104,7 @@ func target_new(deadTarget):
 
 
 func _on_input_event(viewport, event, shape_idx):
+	print('asjdhasjkdh')
 	if foe and foe == shape_idx:
 		strikingRange.append(shape_idx)
 		groovin = false

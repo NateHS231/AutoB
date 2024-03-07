@@ -1,9 +1,9 @@
 extends Node2D
 
 
-@onready var CAST = preload("res://scene/minor/cast.tscn")
+#@onready var CAST = preload("res://scene/minor/cast.tscn")
 @onready var CARD = preload("res://scene/minor/card.tscn")
-@onready var CASTK = preload("res://scene/minor/cast_k.tscn")
+@onready var CASTK = preload("res://scene/minor/cast_meele.tscn")
 #@onready var Test = preload("res://scene/minor/cast.tscn")
 
 var friend =[]

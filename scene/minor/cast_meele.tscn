@@ -1,17 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://2oe16iowcp5m"]
 
-[ext_resource type="Script" path="res://script/cast_k.gd" id="1_0slw6"]
-[ext_resource type="Texture2D" uid="uid://ghysjluu7tav" path="res://icon.svg" id="2_m5nlx"]
+[ext_resource type="Script" path="res://script/cast_meele.gd" id="1_efcnv"]
+[ext_resource type="Texture2D" uid="uid://ghysjluu7tav" path="res://icon.svg" id="2_umv6v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jjo5g"]
 radius = 131.973
 
-[node name="castK" type="CharacterBody2D"]
+[node name="cast_meele" type="CharacterBody2D"]
 scale = Vector2(0.269807, 0.269807)
-script = ExtResource("1_0slw6")
+collision_layer = 3
+collision_mask = 3
+input_pickable = true
+motion_mode = 1
+script = ExtResource("1_efcnv")
 
 [node name="Icon" type="Sprite2D" parent="."]
-texture = ExtResource("2_m5nlx")
+texture = ExtResource("2_umv6v")
 
 [node name="range" type="CollisionShape2D" parent="."]
 scale = Vector2(0.622053, 0.622053)

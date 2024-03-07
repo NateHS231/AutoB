@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dydhq2kdhheid"]
 
 [ext_resource type="Texture2D" uid="uid://ghysjluu7tav" path="res://icon.svg" id="1_fo6t4"]
-[ext_resource type="Script" path="res://script/cast.gd" id="1_trtkd"]
+[ext_resource type="Script" path="res://script/castold.gd" id="1_trtkd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_usj2b"]
 radius = 131.973
